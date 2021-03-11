@@ -21,12 +21,12 @@ const TeamDetails = () => {
         fetch(url)
         .then(res => res.json())
         .then(data => setTeams(data.teams[0]))
-        console.log(teams);
-    }, [])
-    const {strTeamBanner,strTeamBadge,strTeam,strGender,intFormedYear,strCountry,strSport,strDescriptionDE,strDescriptionEN,strTwitter,strFacebook,strYoutube} = teams;
+    }, [teamId])
+    const {strTeamBanner,strTeamBadge,strTeam,strGender,intFormedYear,strCountry,strSport,strDescriptionEN,strTwitter,strFacebook,strYoutube} = teams;
     const teamStyle = {
         backgroundImage:`url(${strTeamBanner})`,
     }
+    const teamImage = strGender ? <img src="/male.png" alt="Male"></img> : <img src="/female.png" alt="Female"></img>
     
     return (
         <div>
@@ -35,25 +35,25 @@ const TeamDetails = () => {
                     <div className="row">
                         <div className="col-md-2">
                             <div className="logo-area">
-                                <img className="logo" src={strTeamBadge}></img>
+                                <img className="logo" src={strTeamBadge} alt="Logo"></img>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="container pt-5 team-information">
-                <div className="row">
-                    <div className="col-md-6">
+            <div className="container pt-5">
+                <div className="row team-information">
+                    <div className="col-md-6 col-12">
                         <div className="single-info">
                             <h3>{strTeam}</h3>
-                            <p><span>{iconMap}</span>Founded: {intFormedYear}</p>
-                            <p><span>{iconFlag}</span>Country: {strCountry}</p>
-                            <p><span>{iconBall}</span>Sports Type: {strSport}</p>
-                            <p><span>{iconGender}</span>Gender: {strGender}</p>
+                            <p><span>{iconMap}</span>Founded : {intFormedYear}</p>
+                            <p><span>{iconFlag}</span>Country : {strCountry}</p>
+                            <p><span>{iconBall}</span>Sports Type : {strSport}</p>
+                            <p><span>{iconGender}</span>Gender : {strGender}</p>
                         </div>
                     </div>
-                    <div className="col-md-6">
-                        <img src={strTeamBadge}></img>
+                    <div className="col-md-6 col-12">
+                        {teamImage}
                     </div>
                 </div>
                 <div className="row">
@@ -66,9 +66,9 @@ const TeamDetails = () => {
                 <div className="row">
                     <div className="col-md-12">
                         <div className="social-area text-center">
-                            <a href={`https://${strTwitter}`} target="_blank"><span>{iconTwitter}</span></a>
-                            <a href={`https://${strFacebook}`} target="_blank"><span>{iconFacebook}</span></a>
-                            <a href={`https://${strYoutube}`} target="_blank"><span>{iconYoutube}</span></a>  
+                            <a href={`https://${strTwitter}`} target="_blank" rel="noreferrer"><span>{iconTwitter}</span></a>
+                            <a href={`https://${strFacebook}`} target="_blank" rel="noreferrer"><span>{iconFacebook}</span></a>
+                            <a href={`https://${strYoutube}`} target="_blank" rel="noreferrer"><span>{iconYoutube}</span></a>  
                         </div>
                     </div>
                 </div>

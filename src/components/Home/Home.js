@@ -9,7 +9,6 @@ const Home = () => {
         fetch('https://www.thesportsdb.com/api/v1/json/1/search_all_teams.php?l=English%20Premier%20League')
         .then(res => res.json())
         .then(data => setTeams(data.teams))
-        console.log(teams);
     }, [])
     return (
         <div>
@@ -17,7 +16,7 @@ const Home = () => {
         <div className="container pt-5">
             <div className="row">
                 {
-                    teams.map(team => <Team team={team}></Team>)
+                    teams.map(team => <Team team={team} key={team.idTeam}></Team>)
                 }
             </div>
         </div>

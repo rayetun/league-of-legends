@@ -1,15 +1,9 @@
 import React from 'react';
+import './Header.css'
 
 const Header = () => {
     const teamStyle = {
         backgroundImage:`url(/background.jpg)`,
-        backgroundRepeat:'no-repeat',
-        backgroundPosition: 'bottom center',
-        backgroundSize:'cover',
-        height:'300px',
-        textAlign:'center',
-        paddingTop:'130px',
-        color:'#fff',
       }
     return (
         <div style={teamStyle} className="banner-area">

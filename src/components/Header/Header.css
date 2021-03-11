@@ -1,0 +1,27 @@
+.banner-area{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:bottom center;
+    text-align: center;
+    margin: 0 auto;
+    padding: 150px 0;
+    position: relative;
+    z-index:1;
+}
+.banner-area:before{
+    width: 100%;
+    height: 100%;
+    left:0;
+    top:0;
+    content: "";
+    background: #000;
+    opacity: 0.4;
+    position: absolute;
+    z-index:-1;
+}
+.banner-area h1{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+}

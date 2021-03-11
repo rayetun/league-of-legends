@@ -1,13 +1,23 @@
 .card{
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     color: #333;
     padding: 20px;
+    box-shadow: 0 0 5px #f2f2f2;
 }
 .card img{
-    height: 100px;
-    width: 100px;
+    height: 130px;
+    width: 130px;
     margin: 10px auto;
 }
 .card h5{
     color: #000
+}
+.card button.btn{
+    background: #3a42ff;
+    padding: 10px 25px;
+    border-radius: none!important
+}
+button.btn span {
+    font-size: 12px;
+    padding-left: 2px;
 }
