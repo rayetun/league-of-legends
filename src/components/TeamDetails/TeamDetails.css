@@ -1,0 +1,35 @@
+.banner-area{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center center;
+    text-align: center;
+    margin: 0 auto;
+    padding: 150px 0;
+    position: relative;
+    z-index:1;
+}
+.banner-area:before{
+    width: 100%;
+    height: 100%;
+    left:0;
+    top:0;
+    content: "";
+    background: #fff;
+    opacity: 0.4;
+    position: absolute;
+    z-index:-1;
+}
+.logo-area{
+    width: 120px;
+    height: 120px;
+    background:#fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #000;
+    transform: scale(1.3);
+    margin: 0 auto;
+}
+.logo{
+    max-width: 90px;
+    height: 90px
+}

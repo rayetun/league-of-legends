@@ -1,0 +1,13 @@
+.card{
+    margin-bottom: 20px;
+    color: #333;
+    padding: 20px;
+}
+.card img{
+    height: 100px;
+    width: 100px;
+    margin: 10px auto;
+}
+.card h5{
+    color: #000
+}
